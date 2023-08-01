@@ -5,7 +5,7 @@
 ### Clonar repositorio
 
 ```shell
-git clone https://github.com/MrTban/CRUD-React-ReduxToolkit.git
+git clone https://github.com/MrTban/NextJs-ReduxToolkit.git
 ```
 
 ### Instalar paquetes

@@ -16,7 +16,7 @@ const HomePage = () => {
 	if (error) return <ErrorState />
 
 	return (
-		<div>
+		<>
 			<div className='flex flex-col items-center justify-center gap-3 my-5'>
 				<h1>Total: {count}</h1>
 				<div className='flex gap-4'>
@@ -39,16 +39,26 @@ const HomePage = () => {
 				</div>
 			</div>
 
-			<div className='grid grid-cols-3 gap-y-6 place-content-center mx-auto'>
+			<div className='grid grid-cols-3 gap-6 place-content-center m-5'>
 				{data?.map((user) => (
-					<div key={user.id}>
-						<p>{user.name}</p>
-						<p>{user.username}</p>
-						<p>{user.email}</p>
+					<div key={user.id} className='relative bg-zinc-800 p-3 rounded-md'>
+						<p className='absolute right-2 top-1 flex items-center justify-center bg-black w-5 h-5 rounded-full'>
+							<span className='text-[10px] font-bold text-zinc-400'>{user.id}</span>
+						</p>
+						<p className='text-zinc-400 font-bold'>
+							UserName: <span className='text-white font-normal'>{user.username}</span>
+						</p>
+						<p className='text-zinc-400 font-bold'>
+							Name: <span className='text-white font-normal'>{user.name}</span>
+						</p>
+
+						<p className='text-zinc-400 font-bold'>
+							Email: <span className='text-white font-normal'>{user.email}</span>
+						</p>
 					</div>
 				))}
 			</div>
-		</div>
+		</>
 	)
 }
 
